@@ -1,0 +1,13 @@
+21:09:33 [Skill] INFO  Skill:138 - Connecting to Furhat server on 0.0.0.0:1932
+21:09:34 [Skill] ERROR EventSystem:182 - Timed out while waiting for class furhatos.event.responses.ResponseWebServerPort
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1784)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1928)
+	at furhatos.event.EventSystem.sendAndWait(EventSystem.java:179)
+	at furhatos.event.EventSystem.sendAndWait(EventSystem.java:169)
+	at furhatos.skills.Skill.requestFurhatWebPort(Skill.java:241)
+	at furhatos.skills.Skill.startSkill(Skill.java:218)
+	at furhatos.skills.Skill.main(Skill.java:94)
+21:09:34 [Skill] ERROR Skill:223 - java.util.concurrent.TimeoutException
+21:09:34 [Skill] WARN  Skill:224 - Unable to get real furhatWebPort, using default of 80
+21:09:34 [Scenario10Skill] INFO  Scenario10Skill:165 - Starting skill
