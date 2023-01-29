@@ -1,4 +1,0 @@
-12:15:18 [Skill] INFO  Skill:139 - Connecting to Furhat server on 0.0.0.0:1932
-12:15:24 [Scenario10Skill] INFO  Scenario10Skill:166 - Starting skill
-12:15:52 [Scenario10Skill] WARN  Flow: 93 - Flow unknown unresponsive, 4398 ms since last event poll
-12:16:03 [Scenario10Skill] WARN  Flow: 93 - Flow unknown unresponsive, 1205 ms since last event poll
