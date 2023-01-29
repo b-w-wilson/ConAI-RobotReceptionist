@@ -1,0 +1,15 @@
+16:42:33 [Skill] INFO  Skill:138 - Connecting to Furhat server on 0.0.0.0:1932
+16:42:34 [Scenario10Skill] INFO  Scenario10Skill:165 - Starting skill
+16:42:53 [Scenario10Skill] WARN  JsonDialogLogger:373 - The directory provided does not end with a trailing directory separator: 
+16:42:56 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 2620 ms since last event poll
+16:43:17 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1009 ms since last event poll
+16:43:25 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1066 ms since last event poll
+16:43:34 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 2105 ms since last event poll
+16:43:48 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 2613 ms since last event poll
+16:43:56 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1841 ms since last event poll
+16:44:00 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1100 ms since last event poll
+16:44:36 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 32593 ms since last event poll
+16:44:43 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1310 ms since last event poll
+16:44:50 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1328 ms since last event poll
+16:44:56 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1278 ms since last event poll
+16:44:57 [EventSystem] INFO  Scenario10Skill:183 - Terminating skill

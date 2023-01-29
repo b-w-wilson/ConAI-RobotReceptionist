@@ -1,0 +1,28 @@
+13:22:00 [Skill] INFO  Skill:138 - Connecting to Furhat server on 0.0.0.0:1932
+13:22:00 [Scenario10Skill] INFO  Scenario10Skill:165 - Starting skill
+13:22:00 [Scenario10Skill] WARN  JsonDialogLogger:373 - The directory provided does not end with a trailing directory separator: 
+13:22:18 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 4270 ms since last event poll
+13:22:34 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1035 ms since last event poll
+13:22:50 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1141 ms since last event poll
+13:22:55 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1025 ms since last event poll
+13:23:01 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1410 ms since last event poll
+13:23:10 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 6016 ms since last event poll
+13:25:28 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1369 ms since last event poll
+13:25:29 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1069 ms since last event poll
+13:25:34 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1093 ms since last event poll
+13:25:41 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1183 ms since last event poll
+13:25:46 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1115 ms since last event poll
+13:25:51 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1111 ms since last event poll
+13:26:26 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 32382 ms since last event poll
+13:26:36 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1399 ms since last event poll
+13:26:46 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1313 ms since last event poll
+13:26:54 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1340 ms since last event poll
+13:27:04 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1578 ms since last event poll
+13:27:10 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1381 ms since last event poll
+13:27:46 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 32821 ms since last event poll
+13:27:54 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1594 ms since last event poll
+13:27:57 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1451 ms since last event poll
+13:28:02 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1441 ms since last event poll
+13:28:38 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 32988 ms since last event poll
+13:28:48 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1238 ms since last event poll
+13:28:57 [Broker Client] ERROR BrokerClient:152 - Unexpected disconnect from broker

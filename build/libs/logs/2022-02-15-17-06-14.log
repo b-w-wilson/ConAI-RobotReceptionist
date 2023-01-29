@@ -1,0 +1,3 @@
+17:06:14 [Skill] INFO  Skill:138 - Connecting to Furhat server on 0.0.0.0:1932
+17:06:14 [Scenario10Skill] INFO  Scenario10Skill:165 - Starting skill
+17:06:41 [Scenario10Skill] WARN  Furhat:264 - furhat.say() was called with an empty string

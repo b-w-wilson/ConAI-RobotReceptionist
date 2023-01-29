@@ -1,13 +1,16 @@
 package furhatos.app.scenario10.flow
 
 import furhatos.flow.kotlin.*
+import furhatos.flow.kotlin.voice.PollyVoice
 import furhatos.util.*
 
 val Idle: State = state {
 
     init {
-        furhat.setVoice(Language.ENGLISH_GB, Gender.FEMALE)
-        furhat.setTexture("Ursula")
+        val defaultVoice = PollyVoice("Emma")
+        furhat.setVoice(defaultVoice)
+        furhat.setCharacter("Isabel")
+        users.setSimpleEngagementPolicy(3.0, 3)
 
         if (users.count > 0) {
             furhat.attend(users.random)

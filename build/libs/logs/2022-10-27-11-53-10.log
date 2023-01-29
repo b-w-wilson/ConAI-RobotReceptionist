@@ -1,0 +1,5 @@
+11:53:10 [Skill] INFO  Skill:138 - Connecting to Furhat server on 0.0.0.0:1932
+11:53:10 [Scenario10Skill] INFO  Scenario10Skill:165 - Starting skill
+11:53:11 [Scenario10Skill] WARN  JsonDialogLogger:373 - The directory provided does not end with a trailing directory separator: 
+11:53:31 [Scenario10Skill] WARN  Flow: 94 - Flow unknown unresponsive, 1134 ms since last event poll
+11:53:40 [Broker Client] ERROR BrokerClient:152 - Unexpected disconnect from broker
