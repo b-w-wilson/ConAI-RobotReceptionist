@@ -7,9 +7,9 @@ import furhatos.util.*
 val Idle: State = state {
 
     init {
-        val defaultVoice = PollyVoice("Emma")
-        furhat.setVoice(defaultVoice)
-        furhat.setCharacter("Isabel")
+        val defaultVoice = PollyVoice("Amy-Neural")
+        furhat.voice = defaultVoice
+        furhat.character = "Isabel"
         users.setSimpleEngagementPolicy(3.0, 3)
 
         if (users.count > 0) {
@@ -29,7 +29,6 @@ val Idle: State = state {
 }
 
 val Interaction: State = state {
-
     onUserLeave(instant = true) {
         if (users.count > 0) {
             if (it == users.current) {
@@ -38,7 +37,7 @@ val Interaction: State = state {
             } else {
                 furhat.glance(it)
             }
-        } else {
+        } else if (users.count == 0) {
             goto(Idle)
         }
     }

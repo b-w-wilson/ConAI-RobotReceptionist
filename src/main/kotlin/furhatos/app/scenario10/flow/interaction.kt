@@ -28,10 +28,13 @@ val Start : State = state(Interaction) {
 
 
     onUserLeave (instant = false) {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.ledStrip.solid(java.awt.Color.YELLOW)
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("Have a lovely day! Goodbye !")
+        if(it == users.current){
+            furhat.ledStrip.solid(java.awt.Color(0,0,0))
+            furhat.ledStrip.solid(java.awt.Color.YELLOW)
+            furhat.ledStrip.solid(java.awt.Color(0,0,0))
+            furhat.say("Have a lovely day! Goodbye !")
+        }
+        goto(Interaction)
     }
 
 }
@@ -49,65 +52,52 @@ fun assistance() : State = state(Interaction) {
 
 
     onUserLeave (instant = false) {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.ledStrip.solid(java.awt.Color.YELLOW)
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("Bye for now!")
+        if(it ==users.current) {
+            furhat.ledStrip.solid(java.awt.Color(0, 0, 0))
+            furhat.ledStrip.solid(java.awt.Color.YELLOW)
+            furhat.ledStrip.solid(java.awt.Color(0, 0, 0))
+            furhat.say("Bye for now!")
+        }
+        goto(Interaction)
     }
 
-    onResponse<Help> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.gesture(Gestures.BigSmile)
-        furhat.say(" I am sending a notification for someone who can help you! please have a seat! they will be with you in few minutes!")
-    }
-
-
-    onResponse <Meeting> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("You need to check in prior to your meeting! You can use the kiosk to check in, Just enter your email address, or the reference code if you have one!")
-        furhat.gesture(Gestures.BigSmile)
-    }
-    onResponse <Work> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("I am always happy to see you! As you know You need to check in prior to entering the robotarium! Just select the first button and enter your details!")
-        furhat.gesture(Gestures.BigSmile)
-    }
-    onResponse <Cafe> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("There is a coffee machine in the first floor, or you can walk to the cafe in the university building across the road.")
-        furhat.gesture(Gestures.BigSmile)
-    }
     onResponse <Notsure> {
         furhat.ledStrip.solid(java.awt.Color(0,0,0))
         furhat.say("I am here if you need my help!")
-
-    }
-    onResponse<Wifi> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.gesture(Gestures.BigSmile)
-        furhat.say("You can connect to our guest wifi called the national robotarium wifi and the password is N R 2 0 2 1")
-    }
-    onResponse<Delivery> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("If you have a delivery please drop it next to me. I am sending a notification to someone who can come to pick it up.")
+        furhat.gesture(Gestures.Smile)
     }
     onResponse<Howareyou> {
         furhat.ledStrip.solid(java.awt.Color(0,0,0))
-         furhat.gesture(Gestures.BigSmile)
-        furhat.say("Fortunately! I was programmed to always feel good! ")
+        furhat.gesture(Gestures.BigSmile)
+        furhat.say("Fortunately! I am programmed to be always happy!")
         furhat.gesture(Gestures.BigSmile)
     }
 
-    onResponse<TalkAboutRobotarium> {
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        furhat.say("the National Robotarium is exploring collaborative interaction between humans, robots and their environments, translating cutting-edge research into new technologies.")
-        furhat.gesture(Gestures.BigSmile)
-    }
     onResponse<Thanks> {
         furhat.ledStrip.solid(java.awt.Color(0,0,0))
         furhat.say("You are Welcome!")
         furhat.gesture(Gestures.BigSmile)
     }
+
+    //
+
+    onResponse<FindRoom> {
+        furhat.say("You can find the room by following the direction @direction")
+        furhat.listen()
+    }
+
+    onResponse<FindCompany> {
+        furhat.say("You can find the Company by following the direction @direction")
+        furhat.listen()
+    }
+
+    onResponse<AskRepeat> {
+        furhat.say("Bazooka")
+        furhat.gesture(Gestures.BigSmile)
+        furhat.listen()
+    }
+
+    //
 
     onResponse { // Catches everything else
 
@@ -137,5 +127,8 @@ fun assistance() : State = state(Interaction) {
 
                 }
             })
+        furhat.ledStrip.solid(java.awt.Color.GREEN)
+        furhat.gesture(Gestures.Smile)
+        furhat.listen()
     }
 }

@@ -1,0 +1,92 @@
+11:56:52 [Skill] INFO  Skill:138 - Connecting to Furhat server on 100.70.40.7:1932
+11:56:52 [Scenario10Skill] INFO  Scenario10Skill:165 - Starting skill
+11:57:04 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:04 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:11 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:11 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:14 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:14 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:15 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:15 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:15 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:15 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:16 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:16 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:21 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:21 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:21 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:21 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:22 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:22 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:23 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:23 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:23 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:23 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:26 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:26 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:26 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:26 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:27 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:27 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:28 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:28 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:30 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:30 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:30 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:30 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:33 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:33 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:33 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:33 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:37 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:37 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:39 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:39 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:40 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:40 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:42 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:42 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:42 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:42 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:43 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:43 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:45 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:45 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:50 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:50 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:50 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:50 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:51 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:51 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:52 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:52 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:52 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:52 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:54 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:54 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:55 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:55 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:59 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:59 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:57:59 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:57:59 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:02 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:02 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:04 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:04 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:10 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:10 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:17 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:17 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:22 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:22 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:26 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:26 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:31 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:31 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:34 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:34 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:36 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:36 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
+11:58:44 [Broker Client] WARN  Event:194 - Could not set field completed with type class java.lang.Boolean on builder class furhatos.event.monitors.MonitorGestureEnd$Builder : null
+11:58:44 [Broker Client] WARN  Event:196 - Verify that the SDK/Robot and Skill have the same version of furhat-commons
