@@ -50,7 +50,6 @@ fun assistance() : State = state(Interaction) {
 
     }
 
-
     onUserLeave (instant = false) {
         if(it ==users.current) {
             furhat.ledStrip.solid(java.awt.Color(0, 0, 0))
@@ -81,18 +80,87 @@ fun assistance() : State = state(Interaction) {
 
     //
 
-    onResponse<FindRoom> {
-        furhat.say("You can find the room by following the direction @direction")
-        furhat.listen()
-    }
 
-    onResponse<FindCompany> {
-        furhat.say("You can find the Company by following the direction @direction")
+    onResponse<FindRoom> {
+        var landmark = true
+        val room_num = it.intent.getEntities().getValue("num")
+
+//        var direction = listOf("Reception", "turn right", "turn left", "room 7")
+//        val room_num = direction.last().toString().last().toString()
+
+        furhat.say("You can find the room ${room_num} by following the direction.")
+        when (room_num)
+        {
+            "1", "one" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at the $ Reception area. Go forward . then $ dir ${if(landmark) "$ at the $ lm" else ""}. and Continue straight . and $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be facing Room 1."
+                        +"Starting from the $ Reception area, move forward. ${if(landmark) "$ at the $ lm" else ""} $ dir then continue straight. ${if(landmark) "$ at the $ lm" else ""} $ dir. and you will be in Room 1."
+                        +"Start at the $ Reception area. move straight . ${if(landmark) "$ at the $ lm" else ""} $ dir. Move forward . ${if(landmark) "$ at the $ lm" else ""} $ dir . You should now be in front of Room 1."
+                    }
+                })
+            }
+            "2", "two" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at $ Reception. move further. ${if(landmark) "$ at the $ lm" else ""} $ dir, move forward. ${if(landmark) "$ at the  $ lm" else ""} $ dir . you will be in room 2"
+                        + "Start at the $ Reception area. Go straight. then $ dir ${if(landmark) "$ at the $ lm" else ""}. go forward . ${if(landmark) "$ at the $ lm" else ""} $ dir . You should find Room 2 infront of you"
+                    }
+                })
+            }
+            "3", "three" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at the $ Reception area. move forward . then  $ dir ${if(landmark) "$ at the $ lm" else ""}. go straight . $ dir ${if(landmark) "$ at the $ lm" else ""} . You should see Room 3 "
+                        + "Start at $ Reception. go straight then . $ dir ${if(landmark) " $ at the $ lm" else ""}, go forward. ${if(landmark) " $ at the $ lm" else ""}  $ dir. Now you will be in room 3"
+                    }
+                })
+            }
+            "4", "four" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at the $ Reception area. Go straight.  ${if(landmark) " $ at the $ lm" else ""} move $ dir . You will be in Room 4."
+                        + "Start at the $ Reception area. Go straight ahead then move $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be in front of Room 4."
+                    }
+                })
+            }
+            "5", "five" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at the $ Reception area move forward. then $ dir ${if(landmark) "$ at the $ lm" else ""}. then Continue straight . then $ dir ${if(landmark) "$ at the $ lm" else ""} . you will have reached Room 5."
+                        + "Start at the $ Reception area. Go straight ahead. and $ dir ${if(landmark) "$ at the $ lm" else ""}. and Continue straight . then take $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be in front of Room 5."
+                    }
+                })
+            }
+            "6", "six" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at the $ Reception area. Go straight and move $ dir  ${if(landmark) "$ at the $ lm" else ""} . then $ dir ${if(landmark) "$ at the $ lm" else ""}. you will reach Room 6"
+                    }
+                })
+            }
+            "7", "seven" ->
+            {
+                furhat.say({
+                    random{
+                        "Start at the $ Reception area. Go straight ahead . and move $ dir ${if (landmark) "$ at the $ fc " else ""}. then  $ dir ${if(landmark) "$ at the $ lm" else ""} . Now you would have reached Room 7"
+                        + "Start at the $ Reception area. Go straight . and move $ dir ${if(landmark)"$ at the $ fc " else ""} . then $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be in front of Room 7."
+                    }
+                })
+            }
+        }
+        furhat.say("Do you want me to repeat it?")
         furhat.listen()
     }
 
     onResponse<AskRepeat> {
-        furhat.say("Bazooka")
+//        furhat.say("Bazooka")
         furhat.gesture(Gestures.BigSmile)
         furhat.listen()
     }
@@ -124,7 +192,6 @@ fun assistance() : State = state(Interaction) {
                     +" Sorry I didn't catch that! Can you speak up, whenever my green light is on please?"
                     +"Can you please speak more loudly, when the green light is on"
                     +" Is it possible for you to raise your voice, a little bit please! When my green light is on! Just so I can hear you clearly!"
-
                 }
             })
         furhat.ledStrip.solid(java.awt.Color.GREEN)

@@ -52,54 +52,23 @@ class AskRepeat() : Intent()
     }
 }
 
-//class FindStaff(var staff : Staff? =null) :Intent()
-//{
-//    override fun getExamples(lang: Language): List<String>
-//    {
-//        return listOf("i want to meet @staff", "i'm here to meet @staff","where can i find @staff")
-//    }
-//}
 
-class FindRoom(var room : Room? = null) : Intent()
-{
-    override fun getExamples(lang: Language): List<String>
-    {
-        return listOf( "I have a appointment in @room", "I would like to go to @room", "I am here to see the @room", "i want to get to @room","How can i get to @room","I would like to know, where can i find the @room","Do you know where is @room", "go to @room", "want to go at @room")
-    }
-}
 
-class FindCompany(var company : Company? = null) : Intent()
+class FindRoom(var num : Room0? = null) : Intent()
 {
-    override fun getExamples(lang: Language): List<String>
+    override fun getExamplesWithParaphrases(lang: Language): List<String>
     {
-        return listOf("i want to get to @company","How can i get to @company","I would like to know, where can i find the @company","Do you know where is @company", "go to @company", "want to go at @company", "I have a meeting in @company", "I would like to go to @company", "I am here to see the @company" )
+        return listOf("room @num", "room number @num","i want to get to room @num","How can i get to room @num","where can i find the room @num","Do you know where is room @num", "go to room @num", "I have a meeting in room @num", "I would like to go to room @num", "I want to reach room @num" )
     }
 }
 // Entity classes
 
 
-//class Staff() : EnumEntity(stemming = true, speechRecPhrases = true)
-//{
-//    override fun getEnum(lang: Language): List<String>
-//    {
-//        return listOf("Steve","person")
-//    }
-//}
-
-class Room(): EnumEntity(stemming = true, speechRecPhrases = true)
-{
-    override fun getExamples(lang: Language?): List<String>
-    {
-        return listOf("conference hall","room1","room2","room3","room4")
-    }
-}
-
-
-class Company() : EnumEntity(stemming = true, speechRecPhrases = true)
+class Room0() : EnumEntity(stemming = true, speechRecPhrases = true)
 {
     override fun getEnum(lang: Language): List<String>
     {
-        return listOf("touch lab","crover up", "NR management", "Cromacity Desk", "RAS Lab", "Shakey Robotics", "NR Engineers")
+        return listOf("one", "two", "three", "four", "five", "six", "seven", "1","2","3","4","5","6","7")
     }
 }
 
