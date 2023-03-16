@@ -82,79 +82,106 @@ fun assistance() : State = state(Interaction) {
 
 
     onResponse<FindRoom> {
-        var landmark = true
-        val room_num = it.intent.getEntities().getValue("num")
+        val isLandmark = false
+        var roomNumber = it.intent.getEntities().getValue("num").toString()
 
-//        var direction = listOf("Reception", "turn right", "turn left", "room 7")
-//        val room_num = direction.last().toString().last().toString()
+        if (roomNumber == "1") {
+            roomNumber = "one"
+        } else if (roomNumber == "2") {
+            roomNumber = "two"
+        } else if (roomNumber == "3") {
+            roomNumber = "three"
+        } else if (roomNumber == "4") {
+            roomNumber = "four"
+        } else if (roomNumber == "5") {
+            roomNumber = "five"
+        } else if (roomNumber == "6") {
+            roomNumber = "six"
+        } else if (roomNumber == "7") {
+            roomNumber = "seven"
+        }
 
-        furhat.say("You can find the room ${room_num} by following the direction.")
+        if (isLandmark) {
+            val (dir, landmarkList) = extractorLandmark("reception", "room $roomNumber", debugg = false)
+            furhat.say(landmarkGeneration(roomNumber, dir, landmarkList))
+        } else {
+            val dir = extractorRelative("reception", "room $roomNumber", debugg = false)
+            furhat.say(relativeGeneration(roomNumber, dir))
+        }
+
+
+
+
+        // furhat.say("You can find the room ${room_num} by following the direction.")
+
+        /*
         when (room_num)
         {
-            "1", "one" ->
+            "one" ->
             {
                 furhat.say({
                     random{
-                        "Start at the $ Reception area. Go forward . then $ dir ${if(landmark) "$ at the $ lm" else ""}. and Continue straight . and $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be facing Room 1."
-                        +"Starting from the $ Reception area, move forward. ${if(landmark) "$ at the $ lm" else ""} $ dir then continue straight. ${if(landmark) "$ at the $ lm" else ""} $ dir. and you will be in Room 1."
-                        +"Start at the $ Reception area. move straight . ${if(landmark) "$ at the $ lm" else ""} $ dir. Move forward . ${if(landmark) "$ at the $ lm" else ""} $ dir . You should now be in front of Room 1."
+                        "Start at the $ Reception area. Go forward . then $ dir ${if(isLandmark) "$ at the $ lm" else ""}. and Continue straight . and $ dir ${if(isLandmark) "$ at the $ lm" else ""}. You should now be facing Room 1."
+                        +"Starting from the $ Reception area, move forward. ${if(isLandmark) "$ at the $ lm" else ""} $ dir then continue straight. ${if(isLandmark) "$ at the $ lm" else ""} $ dir. and you will be in Room 1."
+                        +"Start at the $ Reception area. move straight . ${if(isLandmark) "$ at the $ lm" else ""} $ dir. Move forward . ${if(isLandmark) "$ at the $ lm" else ""} $ dir . You should now be in front of Room 1."
                     }
                 })
             }
-            "2", "two" ->
+            "two" ->
             {
                 furhat.say({
                     random{
-                        "Start at $ Reception. move further. ${if(landmark) "$ at the $ lm" else ""} $ dir, move forward. ${if(landmark) "$ at the  $ lm" else ""} $ dir . you will be in room 2"
-                        + "Start at the $ Reception area. Go straight. then $ dir ${if(landmark) "$ at the $ lm" else ""}. go forward . ${if(landmark) "$ at the $ lm" else ""} $ dir . You should find Room 2 infront of you"
+                        "Start at $ Reception. move further. ${if(isLandmark) "$ at the $ lm" else ""} $ dir, move forward. ${if(isLandmark) "$ at the  $ lm" else ""} $ dir . you will be in room 2"
+                        + "Start at the $ Reception area. Go straight. then $ dir ${if(isLandmark) "$ at the $ lm" else ""}. go forward . ${if(isLandmark) "$ at the $ lm" else ""} $ dir . You should find Room 2 infront of you"
                     }
                 })
             }
-            "3", "three" ->
+            "three" ->
             {
                 furhat.say({
                     random{
-                        "Start at the $ Reception area. move forward . then  $ dir ${if(landmark) "$ at the $ lm" else ""}. go straight . $ dir ${if(landmark) "$ at the $ lm" else ""} . You should see Room 3 "
-                        + "Start at $ Reception. go straight then . $ dir ${if(landmark) " $ at the $ lm" else ""}, go forward. ${if(landmark) " $ at the $ lm" else ""}  $ dir. Now you will be in room 3"
+                        "Start at the $ Reception area. move forward . then  $ dir ${if(isLandmark) "$ at the $ lm" else ""}. go straight . $ dir ${if(isLandmark) "$ at the $ lm" else ""} . You should see Room 3 "
+                        + "Start at $ Reception. go straight then . $ dir ${if(isLandmark) " $ at the $ lm" else ""}, go forward. ${if(isLandmark) " $ at the $ lm" else ""}  $ dir. Now you will be in room 3"
                     }
                 })
             }
-            "4", "four" ->
+            "four" ->
             {
                 furhat.say({
                     random{
-                        "Start at the $ Reception area. Go straight.  ${if(landmark) " $ at the $ lm" else ""} move $ dir . You will be in Room 4."
-                        + "Start at the $ Reception area. Go straight ahead then move $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be in front of Room 4."
+                        "Start at the $ Reception area. Go straight.  ${if(isLandmark) " $ at the $ lm" else ""} move $ dir . You will be in Room 4."
+                        + "Start at the $ Reception area. Go straight ahead then move $ dir ${if(isLandmark) "$ at the $ lm" else ""}. You should now be in front of Room 4."
                     }
                 })
             }
-            "5", "five" ->
+            "five" ->
             {
                 furhat.say({
                     random{
-                        "Start at the $ Reception area move forward. then $ dir ${if(landmark) "$ at the $ lm" else ""}. then Continue straight . then $ dir ${if(landmark) "$ at the $ lm" else ""} . you will have reached Room 5."
-                        + "Start at the $ Reception area. Go straight ahead. and $ dir ${if(landmark) "$ at the $ lm" else ""}. and Continue straight . then take $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be in front of Room 5."
+                        "Start at the $ Reception area move forward. then $ dir ${if(isLandmark) "$ at the $ lm" else ""}. then Continue straight . then $ dir ${if(isLandmark) "$ at the $ lm" else ""} . you will have reached Room 5."
+                        + "Start at the $ Reception area. Go straight ahead. and $ dir ${if(isLandmark) "$ at the $ lm" else ""}. and Continue straight . then take $ dir ${if(isLandmark) "$ at the $ lm" else ""}. You should now be in front of Room 5."
                     }
                 })
             }
-            "6", "six" ->
+            "six" ->
             {
                 furhat.say({
                     random{
-                        "Start at the $ Reception area. Go straight and move $ dir  ${if(landmark) "$ at the $ lm" else ""} . then $ dir ${if(landmark) "$ at the $ lm" else ""}. you will reach Room 6"
+                        "Start at the $ Reception area. Go straight and move $ dir  ${if(isLandmark) "$ at the $ lm" else ""} . then $ dir ${if(isLandmark) "$ at the $ lm" else ""}. you will reach Room 6"
                     }
                 })
             }
-            "7", "seven" ->
+            "seven" ->
             {
                 furhat.say({
                     random{
-                        "Start at the $ Reception area. Go straight ahead . and move $ dir ${if (landmark) "$ at the $ fc " else ""}. then  $ dir ${if(landmark) "$ at the $ lm" else ""} . Now you would have reached Room 7"
-                        + "Start at the $ Reception area. Go straight . and move $ dir ${if(landmark)"$ at the $ fc " else ""} . then $ dir ${if(landmark) "$ at the $ lm" else ""}. You should now be in front of Room 7."
+                        "Start at the $ Reception area. Go straight ahead . and move $ dir ${if (isLandmark) "$ at the $ fc " else ""}. then  $ dir ${if(isLandmark) "$ at the $ lm" else ""} . Now you would have reached Room 7"
+                        + "Start at the $ Reception area. Go straight . and move $ dir ${if(isLandmark)"$ at the $ fc " else ""} . then $ dir ${if(isLandmark) "$ at the $ lm" else ""}. You should now be in front of Room 7."
                     }
                 })
             }
-        }
+        }*/
+
         furhat.say("Do you want me to repeat it?")
         furhat.listen()
     }

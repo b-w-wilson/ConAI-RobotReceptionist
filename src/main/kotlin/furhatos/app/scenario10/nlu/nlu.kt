@@ -68,7 +68,7 @@ class Room0() : EnumEntity(stemming = true, speechRecPhrases = true)
 {
     override fun getEnum(lang: Language): List<String>
     {
-        return listOf("one", "two", "three", "four", "five", "six", "seven", "1","2","3","4","5","6","7")
+        return listOf("1", "2", "3", "4", "5", "6", "7", "one", "two", "three", "four", "five", "six", "seven")
     }
 }
 
