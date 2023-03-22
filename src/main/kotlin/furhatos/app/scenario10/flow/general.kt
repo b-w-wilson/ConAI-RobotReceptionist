@@ -4,11 +4,16 @@ import furhatos.flow.kotlin.*
 import furhatos.flow.kotlin.voice.PollyVoice
 import furhatos.util.*
 
+val genVoice = PollyVoice("Amy-Neural", rate=1.0)
+val slowVoice = PollyVoice("Amy-Neural", rate=0.85)
+
+
+
 val Idle: State = state {
 
     init {
-        val defaultVoice = PollyVoice("Amy-Neural")
-        furhat.voice = defaultVoice
+
+        furhat.voice = genVoice
         furhat.character = "Isabel"
         users.setSimpleEngagementPolicy(3.0, 3)
 
