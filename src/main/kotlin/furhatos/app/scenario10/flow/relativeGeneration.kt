@@ -17,16 +17,16 @@ fun relativeGeneration(roomNumber: String, dir: List<String>): String {
         "Continue forward in the front hallway")
 
     val thenDirection: List<String> = listOf("then turn",
-        "then go",
+        "then, go",
         "continue forward and turn",
         "follow the corridor and turn",
         "follow the hallway and turn",
         "continue this way and turn",
         "walk before turning")
 
-    val arrivedDestination: List<String> = listOf("You arrived at your destination",
-        "You arrived in front of room $roomNumber",
-        "You are at room $roomNumber")
+    val arrivedDestination: List<String> = listOf("You will arrive at your destination",
+        "You will arrive in front of room $roomNumber",
+        "You will be at room $roomNumber")
 
 
     if (dir[0] != "forward") {
@@ -36,7 +36,7 @@ fun relativeGeneration(roomNumber: String, dir: List<String>): String {
     }
 
     for (i in 0..dir.size - 2) {
-        output += ", ${thenDirection[Random.nextInt(0, thenDirection.size)]} ${dir[i+1]}"
+        output += ". ${thenDirection[Random.nextInt(0, thenDirection.size)]} ${dir[i+1]}"
     }
 
     output += ". ${arrivedDestination[Random.nextInt(0, arrivedDestination.size)]}."

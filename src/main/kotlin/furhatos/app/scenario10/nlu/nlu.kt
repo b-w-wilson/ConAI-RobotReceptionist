@@ -33,11 +33,11 @@ class Howareyou : Intent() {
     }
 }
 
-class Thanks() : Intent() {
+/*class Thanks() : Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf("Thanks","thank you" )
     }
-}
+}*/
 
 class Bye() : Intent() {
     override fun getExamples(lang: Language): List<String> {

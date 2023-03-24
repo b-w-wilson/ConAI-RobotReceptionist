@@ -6,11 +6,11 @@ import org.neo4j.driver.GraphDatabase
 
 fun extractorLandmark(startRoom: String, goalRoom: String, debugg: Boolean): Pair<List<String>, List<List<String>>> {
 
-    val uri = "bolt://localhost:7687"
+    val url = "bolt://localhost:7687"
     val username = "neo4j"
     val password = "testtest"
 
-    val driver: Driver = GraphDatabase.driver(uri, AuthTokens.basic(username, password))    // Starts driver
+    val driver: Driver = GraphDatabase.driver(url, AuthTokens.basic(username, password))    // Starts driver
     val session = driver.session()  // Starts a session
 
     // Create the mutable lists

@@ -13,12 +13,14 @@ val Idle: State = state {
 
     init {
 
+        val voice = PollyVoice("Amy-Neutral", pitch = "-10%", rate = 1.0, volume = "-0dB")
         furhat.voice = genVoice
-        furhat.character = "Isabel"
+        furhat.character = "Alex"
         users.setSimpleEngagementPolicy(3.0, 3)
 
         if (users.count > 0) {
             furhat.attend(users.random)
+            dialogLogger.startSession(cloudToken = "36fda452-cc31-4b14-99f6-ea309f5c130e")
             goto(Start)
         }
     }
@@ -43,6 +45,7 @@ val Interaction: State = state {
                 furhat.glance(it)
             }
         } else if (users.count == 0) {
+            dialogLogger.endSession()
             goto(Idle)
         }
     }

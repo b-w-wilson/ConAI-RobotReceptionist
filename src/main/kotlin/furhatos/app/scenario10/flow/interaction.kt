@@ -2,23 +2,28 @@ package furhatos.app.scenario10.flow
 import furhatos.app.scenario10.nlu.*
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
+import furhatos.nlu.common.Goodbye
 import furhatos.nlu.common.Yes
+import furhatos.records.Location
+
+val guidanceType = "landmark"
 
 // The Skill starts here
 val Start : State = state(Interaction) {
 // When a new user enters the scene
     onEntry {
-        furhat.gesture(Gestures.BigSmile)
-        furhat.say({
-            +"Welcome to the national robotarium! I am Charlie!"
-            +blocking {
-                furhat.gesture(Gestures.BigSmile, async = true)
-            }})
-        furhat.gesture(Gestures.BigSmile)
-        furhat.ledStrip.solid(java.awt.Color(0,0,0))
-        if(furhat.isListening()){
+
+        do {
+            furhat.say("Welcome to our experimental setup. I will give you instructions to navigate around a map, based on ${guidanceType} guidance.")
+            furhat.attend(Location.DOWN)
+            furhat.say("Below me is the map.")
+            furhat.attend(users.current)
+            furhat.say("Please follow the instructions that I give you with the pen on the map, starting in the reception, and drawing a continuous line from where you start to where you end.")
             furhat.ledStrip.solid(java.awt.Color.GREEN)
-        }
+            val repeat = furhat.askYN("Do you want me to repeat?")
+            furhat.ledStrip.solid(java.awt.Color(0, 0, 0))
+        } while (repeat == true)
+
         goto(assistance())
     }
 
@@ -28,7 +33,7 @@ val Start : State = state(Interaction) {
             furhat.ledStrip.solid(java.awt.Color(0,0,0))
             furhat.ledStrip.solid(java.awt.Color.YELLOW)
             furhat.ledStrip.solid(java.awt.Color(0,0,0))
-            furhat.say("Have a lovely day! Goodbye !")
+            furhat.say("Have a lovely day! Goodbye!")
         }
         goto(Interaction)
     }
@@ -39,7 +44,7 @@ fun assistance() : State = state(Interaction) {
     onEntry {
         furhat.ledStrip.solid(java.awt.Color(0,0,0))
         furhat.gesture(Gestures.BigSmile)
-        furhat.say("How can I help you today ?")
+        furhat.say("Ask me for the directions of your room.")
         furhat.ledStrip.solid(java.awt.Color.GREEN)
         furhat.gesture(Gestures.Smile)
         furhat.listen()
@@ -68,17 +73,15 @@ fun assistance() : State = state(Interaction) {
         furhat.gesture(Gestures.BigSmile)
     }
 
-    onResponse<Thanks> {
+    /*onResponse<Thanks> {
         furhat.ledStrip.solid(java.awt.Color(0,0,0))
         furhat.say("You are Welcome!")
         furhat.gesture(Gestures.BigSmile)
-    }
-
-    //
+    }*/
 
 
     onResponse<FindRoom> {
-        val isLandmark = true
+        //val isLandmark = false
         var roomNumber = it.intent.getEntities().getValue("num").toString()
 
         if (roomNumber == "1") {
@@ -100,7 +103,7 @@ fun assistance() : State = state(Interaction) {
 
         var directions = ""
 
-        if (isLandmark) {
+        if (guidanceType == "landmark") {
             val (dir, landmarkList) = extractorLandmark("reception", "room $roomNumber", debugg = false)
             directions = landmarkGeneration(roomNumber, dir, landmarkList)
             furhat.say(directions)
@@ -124,23 +127,33 @@ fun assistance() : State = state(Interaction) {
         // Version 2 -- loop
         var stop = false
         do{
+            furhat.ledStrip.solid(java.awt.Color.GREEN)
             val repeat = furhat.askYN("Do you want me to repeat?")
+            furhat.ledStrip.solid(java.awt.Color(0, 0, 0))
             if (repeat == true) {
                 furhat.say(directions)
             } else {
                 stop = true
             }
         } while (stop == false)
-        furhat.ask("Can I help you with any other things?")
-
-
+        furhat.ask("If you need any other directions please ask or you can say goodbye.", timeout = 10000)
 
     }
 
-    onResponse<AskRepeat> {
+    /*onResponse<AskRepeat> {
         furhat.say("ok")
         furhat.gesture(Gestures.BigSmile)
         furhat.listen()
+    }*/
+
+    onResponse<Bye> {
+        furhat.say({random {
+            + "Goodbye!"
+            + "See you later!"
+            + "Bye!" }
+        })
+        furhat.gesture(Gestures.BigSmile)
+        goto(Idle)
     }
 
 
@@ -149,10 +162,10 @@ fun assistance() : State = state(Interaction) {
         furhat.ledStrip.solid(java.awt.Color(0,0,0))
         furhat.say({
             random {
-                +" Sorry! I didn't hear you, Would you speak a little louder when my green light is on please"
-                +" Sorry I didn't catch that! Can you speak up, whenever my green light is on please?"
-                +"Can you please speak more loudly, when the green light is on"
-                +" Is it possible for you to raise your voice, a little bit please! When my green light is on! Just so I can hear you clearly!"
+                + "Sorry! I didn't hear you, Would you speak a little louder when my green light is on please"
+                + "Sorry I didn't catch that! Can you speak up, whenever my green light is on please?"
+                + "Can you please speak more loudly, when the green light is on"
+                + "Is it possible for you to raise your voice, a little bit please!"
 
             }
         })
@@ -165,10 +178,10 @@ fun assistance() : State = state(Interaction) {
         furhat.ledStrip.solid(java.awt.Color(0, 0, 0))
         furhat.say({
                 random {
-                    +" Sorry! I didn't hear you, Would you speak a little louder when my green light is on please"
-                    +" Sorry I didn't catch that! Can you speak up, whenever my green light is on please?"
-                    +"Can you please speak more loudly, when the green light is on"
-                    +" Is it possible for you to raise your voice, a little bit please! When my green light is on! Just so I can hear you clearly!"
+                    + "Sorry! I didn't hear you, Would you speak a little louder when my green light is on please"
+                    + "Sorry I didn't catch that! Can you speak up, whenever my green light is on please?"
+                    + "Can you please speak more loudly, when the green light is on"
+                    + "Is it possible for you to raise your voice, a little bit please!"
                 }
             })
         furhat.ledStrip.solid(java.awt.Color.GREEN)

@@ -6,17 +6,15 @@ import org.neo4j.driver.GraphDatabase
 
 fun extractorRelative(startRoom: String, goalRoom: String, debugg: Boolean): List<String> {
 
-    val uri = "bolt://localhost:7687"
+    val url= "bolt://localhost:7687"
     val username = "neo4j"
     val password = "testtest"
 
-    val driver: Driver = GraphDatabase.driver(uri, AuthTokens.basic(username, password))    // Starts driver
+    val driver: Driver = GraphDatabase.driver(url, AuthTokens.basic(username, password))    // Starts driver
     val session = driver.session()  // Starts a session
 
     // Create the mutable lists
     val directionList: MutableList<String> = mutableListOf()
-    val orderList: MutableList<Int> = mutableListOf()
-    val landmarkList: MutableList<MutableList<String>> = mutableListOf()
 
     // Query
     val result = session.run(
