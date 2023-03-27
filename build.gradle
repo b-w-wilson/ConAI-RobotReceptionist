@@ -49,6 +49,7 @@ dependencies {
     compile 'com.furhatrobotics.furhatos:furhat-commons:2.2.0'
     implementation 'com.beust:klaxon:5.5'
 
+    implementation("org.neo4j.driver:neo4j-java-driver:4.4.6") // to connect to neo4j
 }
 
 jar {

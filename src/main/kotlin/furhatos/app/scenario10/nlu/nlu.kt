@@ -11,7 +11,7 @@ import furhatos.util.Language
 // Intents
 class No() : Intent() {
     override fun getExamples(lang: Language): List<String> {
-        return listOf("no", "I don't think so", "definetely not", "I don't" , "I believe not")
+        return listOf("no", "I don't think so", "definetely not", "I don't" , "I believe not", "no thanks", "no thank you")
     }
 }
 
@@ -33,11 +33,11 @@ class Howareyou : Intent() {
     }
 }
 
-class Thanks() : Intent() {
+/*class Thanks() : Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf("Thanks","thank you" )
     }
-}
+}*/
 
 class Bye() : Intent() {
     override fun getExamples(lang: Language): List<String> {
@@ -48,7 +48,7 @@ class Bye() : Intent() {
 class AskRepeat() : Intent()
 {
     override fun getExamples(lang: Language): List<String> {
-        return listOf("I would like to hear it again", "Sorry can you repeat it", "sorry", "Can you repeat it", "please repeat it again")
+        return listOf("I would like to hear it again", "Sorry can you repeat it", "sorry I didn't catch that", "Can you repeat it", "please repeat it again", "say it again")
     }
 }
 
@@ -68,7 +68,7 @@ class Room0() : EnumEntity(stemming = true, speechRecPhrases = true)
 {
     override fun getEnum(lang: Language): List<String>
     {
-        return listOf("one", "two", "three", "four", "five", "six", "seven", "1","2","3","4","5","6","7")
+        return listOf("1", "2", "3", "4", "5", "6", "7", "one", "two", "three", "four", "five", "six", "seven")
     }
 }
 
